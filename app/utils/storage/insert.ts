@@ -1,5 +1,4 @@
 import type { Product } from "~/types/product";
-import { NEW_PRODUCT_KEY } from "~/utils/config";
 import { isProductEqual } from "~/utils/product/equal";
 import { getCurrentCart } from "~/utils/storage/get";
 import { setCurrentCart } from "~/utils/storage/set";
@@ -32,5 +31,4 @@ export function insertProduct(product: Product): void {
         products: updatedProducts,
     };
     setCurrentCart(updatedCart);
-    localStorage.setItem(NEW_PRODUCT_KEY, "1");
 }

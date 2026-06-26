@@ -1,11 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { Cart } from "~/types/cart";
 import type { Product } from "~/types/product";
-import {
-    NEW_PRODUCT_KEY,
-    STORAGE_CURRENT_KEY,
-    STORAGE_MASTER_KEY,
-} from "~/utils/config";
+import { STORAGE_CURRENT_KEY, STORAGE_MASTER_KEY } from "~/utils/config";
 import * as storageCreate from "~/utils/storage/create";
 import * as storageDelete from "~/utils/storage/delete";
 import * as storageDuplicate from "~/utils/storage/duplicate";
@@ -175,13 +171,11 @@ describe("storage utils", () => {
                     products: [PRODUCT],
                 }),
             );
-            expect(localStorage.getItem(NEW_PRODUCT_KEY)).toBe("1");
         });
         it("does nothing if no current cart list", () => {
             storageSet.setCurrentCartKey("missing");
             storageInsert.insertProduct(PRODUCT);
             expect(localStorage.getItem("missing")).toBeNull();
-            expect(localStorage.getItem(NEW_PRODUCT_KEY)).toBeNull();
         });
         it("increases quantity if identical product exists", () => {
             localStorage.setItem(STORAGE_MASTER_KEY, "foo");
@@ -197,7 +191,6 @@ describe("storage utils", () => {
             const updated = JSON.parse(localStorage.getItem("foo") || "{}");
             expect(updated.products).toHaveLength(1);
             expect(updated.products[0].q).toBe(2);
-            expect(localStorage.getItem(NEW_PRODUCT_KEY)).toBe("1");
         });
     });
 

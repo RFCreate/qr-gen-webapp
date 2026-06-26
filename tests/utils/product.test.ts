@@ -10,10 +10,10 @@ const PRODUCTS: Product[] = [PRODUCT];
 const BASE64_CART = "eNqLrlbKU7JSKijKTylNLlHSUSpUsjKsjQUAV88HLg==";
 
 describe("getProductName", () => {
-    it("capitalizes words (except 'the', 'of', 'and') and replaces underscores", () => {
+    it("write name in human-readable format", () => {
         expect(getProductName("espresso")).toBe("Espresso");
-        expect(getProductName("cup_of_tea")).toBe("Cup of Tea");
-        expect(getProductName("brave_and_the_bold")).toBe("Brave and the Bold");
+        expect(getProductName("cup_of_the_tea")).toBe("Cup of the Tea");
+        expect(getProductName("the_good_and_bad")).toBe("The Good and Bad");
     });
 });
 
