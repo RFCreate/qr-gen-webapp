@@ -28,7 +28,13 @@ global.localStorage = {
     clear() {
         this.store = {};
     },
-} as any;
+    key(index: number) {
+        return Object.keys(this.store)[index] ?? null;
+    },
+    get length() {
+        return Object.keys(this.store).length;
+    },
+} as Storage;
 
 describe("storage utils", () => {
     beforeEach(() => {
