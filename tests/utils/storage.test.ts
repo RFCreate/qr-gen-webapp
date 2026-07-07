@@ -11,7 +11,7 @@ import * as storageSet from "~/utils/storage/set";
 
 const CART: Cart = { title: "Cart", products: [] };
 const NEW_CART: Cart = { title: "New Cart", products: [] };
-const PRODUCT: Product = { n: "product", q: 1 };
+const PRODUCT: Product = { n: "product", q: 1, c: 0 };
 
 // Mock localStorage
 global.localStorage = {

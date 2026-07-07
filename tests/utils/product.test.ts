@@ -5,9 +5,9 @@ import { decompressProducts } from "~/utils/product/decompress";
 import { isProductEqual } from "~/utils/product/equal";
 import { getProductName } from "~/utils/product/name";
 
-const PRODUCT: Product = { n: "product", q: 1 };
+const PRODUCT: Product = { n: "product", q: 1, c: 0 };
 const PRODUCTS: Product[] = [PRODUCT];
-const BASE64_CART = "eNqLrlbKU7JSKijKTylNLlHSUSpUsjKsjQUAV88HLg==";
+const BASE64_CART = "eNqLrlbKU7JSKijKTylNLlHSUSpUsjLUUUpWsjKojQUAhIkIaw==";
 
 describe("getProductName", () => {
     it("write name in human-readable format", () => {
