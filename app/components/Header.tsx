@@ -60,7 +60,7 @@ const Header = () => {
             </div>
             {/* Logo */}
             <img
-                src="/images/logo/logo-minimal.png"
+                src="/images/logo.png"
                 alt="Logo"
                 className="size-10 justify-self-center"
             />
