@@ -1,87 +1,55 @@
-# Welcome to React Router!
+# QR Generator Webapp
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Generate and share QR codes for restaurant menu selections using a fast, browser-based interface.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+This project helps food businesses move from printed menus to a lightweight digital flow. Users can build item lists, generate QR payloads, and share those codes with staff for order handling.
 
-## Features
+## Why This Exists
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+Printed menus are hard to update and can slow down ordering. This app provides:
+- Faster updates to menu-linked selections
+- Simple QR sharing between users
+- A consistent browser experience with local persistence
 
-## Getting Started
+## Core Features
 
-### Installation
+- Create QR codes from selected menu items
+- Manage multiple item lists
+- Keep list data in browser storage
+- Share generated QR codes with other users
+- Responsive web interface for menu browsing
 
-Install the dependencies:
+## Current Limitations
 
-```bash
-npm install
-```
+- QR payloads are generated from client-side state only
+- No backend sync or server-side menu source
+- Shared codes do not auto-refresh if menu content changes later
+- Data is tied to the browser/device unless exported or shared manually
 
-### Development
+## Tech Stack
 
-Start the development server with HMR:
+- React Router + Vite
+- TypeScript
+- Local browser storage for persistence
 
-```bash
-npm run dev
-```
+## Local Development
 
-Your application will be available at `http://localhost:5173`.
+1. Install dependencies:
+pnpm install
 
-## Building for Production
+2. Start development server:
+pnpm dev
 
-Create a production build:
+3. Run tests:
+pnpm test
 
-```bash
-npm run build
-```
+## Roadmap Ideas
 
-## Deployment
+- Server-backed menu source and versioning
+- Auto-invalidating stale QR payloads
+- User accounts and cross-device sync
+- Export and import list backups
 
-### Docker Deployment
+## Image Credits
 
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Icons made by Smashicons from www.flaticon.com
