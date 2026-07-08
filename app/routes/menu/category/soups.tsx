@@ -6,7 +6,7 @@ import { stringifyCategory } from "~/utils/category/stringify";
 import { getCurrentCartKey } from "~/utils/storage/get";
 import type { Route } from "./+types/soups";
 
-const PRODUCTS: string[] = [];
+const PRODUCTS: string[] = ["creamy_corn_soup", "tomato_soup", "pozole"];
 
 export function meta() {
     const categoryName = stringifyCategory(Category.SOUPS);

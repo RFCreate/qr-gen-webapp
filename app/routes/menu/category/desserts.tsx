@@ -6,7 +6,16 @@ import { stringifyCategory } from "~/utils/category/stringify";
 import { getCurrentCartKey } from "~/utils/storage/get";
 import type { Route } from "./+types/desserts";
 
-const PRODUCTS: string[] = [];
+const PRODUCTS: string[] = [
+    "ice_cream",
+    "cheesecake",
+    "brownie",
+    "cupcake",
+    "banana_split",
+    "pie",
+    "chocolate",
+    "cookie",
+];
 
 export function meta() {
     const categoryName = stringifyCategory(Category.DESSERTS);

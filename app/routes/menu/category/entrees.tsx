@@ -6,7 +6,20 @@ import { stringifyCategory } from "~/utils/category/stringify";
 import { getCurrentCartKey } from "~/utils/storage/get";
 import type { Route } from "./+types/entrees";
 
-const PRODUCTS: string[] = [];
+const PRODUCTS: string[] = [
+    "steak",
+    "lasagne",
+    "burger",
+    "chicken",
+    "taco",
+    "burrito",
+    "sushi",
+    "pasta",
+    "shrimp",
+    "fish",
+    "pizza",
+    "hotdog",
+];
 
 export function meta() {
     const categoryName = stringifyCategory(Category.ENTREES);
