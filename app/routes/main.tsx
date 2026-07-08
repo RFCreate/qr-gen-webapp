@@ -8,7 +8,7 @@ import { deleteCart } from "~/utils/storage/delete";
 import { duplicateCart } from "~/utils/storage/duplicate";
 import { getAllCartKeys, getCart } from "~/utils/storage/get";
 import { setCart, setCurrentCartKey } from "~/utils/storage/set";
-import type { Route } from "./main/+types";
+import type { Route } from "./+types/main";
 
 type CartExtended = Cart & { key: string; isOpen: boolean };
 

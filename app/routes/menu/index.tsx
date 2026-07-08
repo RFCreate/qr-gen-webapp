@@ -24,7 +24,7 @@ const Item = ({ category }: { category: Category }) => {
     return (
         <button
             type="button"
-            className="relative aspect-square size-full flex items-end justify-center rounded-lg shadow-md overflow-hidden focus:outline-none cursor-pointer"
+            className="relative aspect-square size-full flex items-end justify-center rounded-lg shadow-md overflow-hidden focus:outline-none cursor-pointer bg-gray-200 dark:bg-gray-800"
             onClick={() => navigate(`/webapp/menu/${categoryName}`)}
         >
             <img
@@ -32,7 +32,7 @@ const Item = ({ category }: { category: Category }) => {
                 alt={categoryName}
                 className="absolute inset-0 object-cover hover:scale-105 transition-transform duration-200"
             />
-            <span className="relative z-10 w-full text-center text-white text-lg font-bold py-2 tracking-wide text-shadow-lg">
+            <span className="relative z-10 w-full text-center text-white text-xl font-bold py-2 tracking-wide text-shadow-lg">
                 {categoryName.toUpperCase()}
             </span>
         </button>
@@ -45,7 +45,7 @@ const Menu = () => {
             <span className="text-2xl font-bold mb-8 text-center">
                 ¿QUÉ SE TE ANTOJA HOY?
             </span>
-            <div className="grid grid-cols-2 gap-6 w-full max-w-md">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-6xl">
                 <Item category={Category.STARTERS} />
                 <Item category={Category.SALADS} />
                 <Item category={Category.SOUPS} />
