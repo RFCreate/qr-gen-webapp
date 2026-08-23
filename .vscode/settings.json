@@ -4,10 +4,12 @@
     "editor.indentSize": "tabSize",
     "editor.tabSize": 4,
     "editor.codeActionsOnSave": {
+        "source.fixAll.biome": "explicit",
         "source.organizeImports.biome": "explicit"
     },
     "files.associations": {
         "*.css": "tailwindcss"
     },
-    "js/ts.preferences.importModuleSpecifier": "non-relative"
+    "js/ts.preferences.importModuleSpecifier": "non-relative",
+    "js/ts.preferences.preferTypeOnlyAutoImports": true
 }
