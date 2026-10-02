@@ -1,4 +1,4 @@
-import pako from "pako";
+import { deflate } from "pako";
 import type { Product } from "~/types/product";
 
 /**
@@ -16,7 +16,7 @@ export const compressProducts = (products: Product[]): string | null => {
         const uint8Array = new TextEncoder().encode(jsonString);
 
         // Compress
-        const compressedData = pako.deflate(uint8Array, { level: 9 });
+        const compressedData = deflate(uint8Array, { level: 9 });
 
         // Convert compressed data to Base64 string
         const base64String = btoa(String.fromCharCode(...compressedData));

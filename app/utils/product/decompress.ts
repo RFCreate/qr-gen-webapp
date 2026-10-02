@@ -1,4 +1,4 @@
-import pako from "pako";
+import { inflate } from "pako";
 import type { Product } from "~/types/product";
 
 /**
@@ -18,7 +18,7 @@ export const decompressProducts = (base64String: string): Product[] | null => {
         );
 
         // Decompress
-        const decompressedData = pako.inflate(uint8Array, { to: "string" });
+        const decompressedData = inflate(uint8Array, { toText: true });
 
         // Parse the decompressed JSON string back into an object
         const jsonString = JSON.parse(decompressedData);
